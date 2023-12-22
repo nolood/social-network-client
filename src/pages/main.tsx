@@ -1,7 +1,12 @@
 import { type FC } from "react";
+import { Sidebar } from "~/widgets";
 
 const Main: FC = () => {
-  return <div>Main page</div>;
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 };
 
 export default Main;
