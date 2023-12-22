@@ -35,6 +35,11 @@ export const buildLoaders = (
     },
   };
 
+  const cssLoader = {
+    test: /\.css$/i,
+    use: ["style-loader", "css-loader"],
+  };
+
   const scssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -59,5 +64,17 @@ export const buildLoaders = (
     exclude: /node_modules/,
   };
 
-  return [assetLoader, scssLoader, tsLoader, svgrLoader];
+  const fontsLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    type: "asset/resource",
+  };
+
+  return [
+    assetLoader,
+    cssLoader,
+    scssLoader,
+    tsLoader,
+    svgrLoader,
+    fontsLoader,
+  ];
 };
