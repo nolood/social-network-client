@@ -1,11 +1,12 @@
 import { type FC } from "react";
-import { Sidebar } from "~/widgets";
+import { Chats } from "~/widgets";
+import { PageLayout } from "~/shared/ui";
 
 const Main: FC = () => {
   return (
-    <div>
-      <Sidebar />
-    </div>
+    <PageLayout>
+      <Chats />
+    </PageLayout>
   );
 };
 

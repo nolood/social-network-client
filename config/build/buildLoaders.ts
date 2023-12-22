@@ -37,7 +37,7 @@ export const buildLoaders = (
 
   const cssLoader = {
     test: /\.css$/i,
-    use: ["style-loader", "css-loader"],
+    use: ["style-loader", "css-loader", "postcss-loader"],
   };
 
   const scssLoader = {
@@ -46,6 +46,18 @@ export const buildLoaders = (
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
       cssLoaderWithModules,
       "sass-loader",
+    ],
+  };
+
+  const urlLoader = {
+    test: /\.(png|jpg|gif|svg)$/i,
+    use: [
+      {
+        loader: "url-loader",
+        options: {
+          limit: 8192,
+        },
+      },
     ],
   };
 
@@ -70,6 +82,7 @@ export const buildLoaders = (
   };
 
   return [
+    urlLoader,
     assetLoader,
     cssLoader,
     scssLoader,

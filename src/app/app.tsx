@@ -1,4 +1,4 @@
-import "./styles/globals.scss";
+import "./styles/globals.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "~/shared/router/router";
 import { type FC } from "react";

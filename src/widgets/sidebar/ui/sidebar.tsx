@@ -6,7 +6,7 @@ import { type FC } from "react";
 const SidebarLocal: FC = observer(() => {
   const { isVisible, hide } = SidebarModule;
   return (
-    <Sidebar visible={isVisible} onHide={() => hide()}>
+    <Sidebar showCloseIcon={false} visible={isVisible} onHide={hide}>
       dasdasdas
     </Sidebar>
   );
