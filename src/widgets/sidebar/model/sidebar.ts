@@ -5,7 +5,7 @@ class SidebarModule {
     makeAutoObservable(this);
   }
 
-  isVisible: boolean = true;
+  isVisible: boolean = false;
 
   show = (): void => {
     this.isVisible = true;

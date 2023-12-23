@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import ChatCard from "~/features/chat-card/ui/chat-card";
+import { ChatCard } from "~/features";
 
 export interface ChatMockType {
   avatar: string;
@@ -22,9 +22,9 @@ const chatMockArray: ChatMockType[] = Array.from(
   }),
 );
 
-const Chats: FC = () => {
+const ChatsList: FC = () => {
   return (
-    <div className="flex flex-col w-[30%] min-w-[500px] h-full bg-ctp-base rounded-[6px] overflow-y-auto">
+    <div className="flex flex-col h-full overflow-y-auto">
       {chatMockArray.map((chat, index) => (
         <ChatCard key={index} item={chat} />
       ))}
@@ -32,4 +32,4 @@ const Chats: FC = () => {
   );
 };
 
-export default Chats;
+export default ChatsList;

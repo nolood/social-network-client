@@ -49,18 +49,6 @@ export const buildLoaders = (
     ],
   };
 
-  const urlLoader = {
-    test: /\.(png|jpg|gif|svg)$/i,
-    use: [
-      {
-        loader: "url-loader",
-        options: {
-          limit: 8192,
-        },
-      },
-    ],
-  };
-
   const tsLoader = {
     test: /\.tsx?$/,
     use: [
@@ -82,7 +70,6 @@ export const buildLoaders = (
   };
 
   return [
-    urlLoader,
     assetLoader,
     cssLoader,
     scssLoader,
