@@ -6,3 +6,17 @@
 body, #root {
     height: 100%;
 }
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    @apply bg-ctp-base
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-ctp-lavender;
+    border-radius: 10px;
+}

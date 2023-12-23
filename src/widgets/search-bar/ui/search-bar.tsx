@@ -14,7 +14,7 @@ const SearchBar: FC = () => {
         icon={<HamburgerButton theme="outline" size="24" />}
       />
       <InputText
-        className="flex-1 p-inputtext-sm !bg-ctp-crust"
+        className="flex-1 p-inputtext-sm !bg-ctp-crust !border-none !text-ctp-text placeholder:!text-ctp-text"
         placeholder={"Search"}
       />
     </div>
